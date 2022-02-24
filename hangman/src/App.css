@@ -1,17 +1,29 @@
 #app {
   text-align: center;
-  border: 1px solid orange;
+  border: 2px solid orange;
+  padding: 50px;
 }
 
 #game {
-  border: 1px solid green;
+  border: 2px solid green;
   height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
 }
 
 #word {
-  border: 1px solid blue;
+  border: 2px solid blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+#hangman {
+  border: 2px solid purple;
+  padding: 50px;
 }
 
 .letter {
   border: 1px solid red;
+  padding: 5px;
 }
