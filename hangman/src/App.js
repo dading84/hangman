@@ -1,9 +1,11 @@
-import './App.css';
+import "./App.css";
+import Game from "./components/Game.js";
 
 function App() {
   return (
-    <div className="App">
+    <div id="app">
       <h1>Hangman</h1>
+      <Game />
     </div>
   );
 }

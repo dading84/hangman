@@ -1,3 +1,17 @@
-.App {
+#app {
   text-align: center;
+  border: 1px solid orange;
+}
+
+#game {
+  border: 1px solid green;
+  height: 500px;
+}
+
+#word {
+  border: 1px solid blue;
+}
+
+.letter {
+  border: 1px solid red;
 }
