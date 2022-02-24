@@ -1,12 +1,16 @@
 import Letter from "./Letter.js";
 
 function Word() {
+  const word = "hangman";
+
+  const letters = word.split('')
+
   return (
     <div id="word">
-      <Letter char="w" />
-      <Letter char="o" />
-      <Letter char="r" />
-      <Letter char="d" />
+      {letters.map(letter => {
+        return <Letter char={letter} />
+      })      
+      }
     </div>
   );
 }
