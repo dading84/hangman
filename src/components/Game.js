@@ -1,15 +1,17 @@
+import { useState } from "react";
 import Word from "./Word.js";
 import Hangman from "./Hangman.js";
 import Form from "./Form.js";
 import ChosenLetters from "./ChosenLetters.js";
 
 function Game() {
+  const [chosenLetters, setChosenLetters] = useState([]);
   return (
     <div id="game">
       <Word />
       <Hangman />
-      <Form />
-      <ChosenLetters />
+      <Form chosenLetters={chosenLetters} setChosenLetters={setChosenLetters} />
+      <ChosenLetters chosenLetters={chosenLetters} />
     </div>
   );
 }

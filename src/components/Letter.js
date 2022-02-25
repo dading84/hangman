@@ -1,12 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-function Letter(props) {
+function Letter({ char, startVisible = false }) {
+  const [visible, setVisible] = useState(startVisible);
 
-  const [visible, setVisible] = useState(false);
-
-  console.log(visible)
-
-  return <span className="letter">{visible ? props.char : '_'}</span>;
+  return <span className="letter">{visible ? char : "_"}</span>;
 }
 
 export default Letter;

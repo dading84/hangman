@@ -1,8 +1,15 @@
-function ChosenLetters(props) {
+import Letter from "./Letter.js";
+
+function ChosenLetters({ chosenLetters }) {
+  let i = 0;
   return (
     <div id="chosen-letters">
       <span>Your guesses:</span>
-      <span id="letters"></span>
+      <span className="letters">
+        {chosenLetters.map((letter) => {
+          return <Letter key={i++} char={letter} startVisible={true} />;
+        })}
+      </span>
     </div>
   );
 }

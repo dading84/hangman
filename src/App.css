@@ -40,6 +40,10 @@ input {
   margin: 0 10px;
 }
 
+.letters {
+  margin-left: 1em;
+}
+
 .letter {
   border: 1px solid red;
   padding: 5px;
