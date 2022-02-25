@@ -33,7 +33,7 @@ function Game() {
       <Word word={word} chosenLetters={chosenLetters} />
       <Hangman score={score} />
       {userInput}
-      <ChosenLetters chosenLetters={chosenLetters} />
+      <ChosenLetters chosenLetters={chosenLetters} word={word} />
     </div>
   );
 }

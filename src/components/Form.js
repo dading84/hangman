@@ -16,7 +16,7 @@ function Form({
     event.preventDefault();
     if (!input) return;
     setChosenLetters((currLetters) => {
-      const newLetters = [input, ...currLetters];
+      const newLetters = [...currLetters, input];
       const win = word.split("").every((letter) => {
         return newLetters.includes(letter);
       });

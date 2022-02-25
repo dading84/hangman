@@ -24,7 +24,8 @@ img {
   margin: 10px;
 }
 
-form {
+form,
+#end-message {
   /* border: 2px solid yellow; */
   padding: 10px;
   margin: 10px;
@@ -51,6 +52,15 @@ input {
 
 .letters {
   margin-left: 1em;
+}
+
+#chosen-letters .success {
+  color: green;
+}
+
+#chosen-letters .failure {
+  color: red;
+  text-decoration: line-through;
 }
 
 .letter {
