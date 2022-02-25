@@ -6,6 +6,7 @@ function Form({
   setScore,
   word,
   setEndMessage,
+  setRunning,
 }) {
   const [input, setInput] = useState("");
   const [msg, setMsg] = useState("");
@@ -20,16 +21,16 @@ function Form({
         return newLetters.includes(letter);
       });
       if (win) {
-        //I think this should likely change state of GameRunning or similar?
-        setEndMessage("You have won!");
+        setRunning(false);
+        setEndMessage("You have won");
       }
       return newLetters;
     });
     setScore((score) => {
       if (!word.split("").includes(input)) score++;
-      if (score == 5) {
-        //I think this should likely change state of GameRunning or similar?
-        setEndMessage("You have lost!");
+      if (score === 5) {
+        setRunning(false);
+        setEndMessage("You have lost");
       }
       return score;
     });
@@ -47,7 +48,7 @@ function Form({
 
   return (
     <form onSubmit={handleSubmit}>
-      Enter a letter and click Try:
+      Enter a letter and click 'Try':
       <input type="text" value={input} onChange={validateChar} maxLength="1" />
       <button>Try</button>
       <div id="form-msg">{msg}</div>

@@ -10,19 +10,30 @@ function Game() {
   const [chosenLetters, setChosenLetters] = useState([]);
   const [score, setScore] = useState(0);
   const [endMessage, setEndMessage] = useState("");
-  return (
-    <div id="game">
-      <Word word={word} chosenLetters={chosenLetters} />
-      <Hangman score={score} />
-      <ChosenLetters chosenLetters={chosenLetters} />
+  const [running, setRunning] = useState(true);
+
+  let userInput;
+  if (running) {
+    userInput = (
       <Form
         chosenLetters={chosenLetters}
         setChosenLetters={setChosenLetters}
         setScore={setScore}
         word={word}
         setEndMessage={setEndMessage}
+        setRunning={setRunning}
       />
-      <EndMessage endMessage={endMessage} />
+    );
+  } else {
+    userInput = <EndMessage endMessage={endMessage} />;
+  }
+
+  return (
+    <div id="game">
+      <Word word={word} chosenLetters={chosenLetters} />
+      <Hangman score={score} />
+      {userInput}
+      <ChosenLetters chosenLetters={chosenLetters} />
     </div>
   );
 }

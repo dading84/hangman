@@ -1,5 +1,9 @@
 function Hangman({ score }) {
-  return <div id="hangman">hangman score: {score}</div>;
+  return (
+    <div id="hangman">
+      <img src={`./images/${score}.png`} />
+    </div>
+  );
 }
 
 export default Hangman;
