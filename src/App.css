@@ -34,6 +34,11 @@ input {
   width: 1em;
 }
 
+#form-msg {
+  font-size: 0.8em;
+  color: red;
+}
+
 #hangman {
   border: 2px solid purple;
   padding: 50px;
