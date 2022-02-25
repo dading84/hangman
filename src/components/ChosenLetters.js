@@ -7,7 +7,7 @@ function ChosenLetters({ chosenLetters }) {
       <span>Your guesses:</span>
       <span className="letters">
         {chosenLetters.map((letter) => {
-          return <Letter key={i++} char={letter} startVisible={true} />;
+          return <Letter key={i++} char={letter} visible={true} />;
         })}
       </span>
     </div>

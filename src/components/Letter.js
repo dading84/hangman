@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-function Letter({ char, startVisible = false }) {
-  const [visible, setVisible] = useState(startVisible);
-
+function Letter({ char, visible }) {
   return <span className="letter">{visible ? char : "_"}</span>;
 }
 

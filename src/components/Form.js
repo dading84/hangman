@@ -1,14 +1,37 @@
 import { useState } from "react";
 
-function Form({ chosenLetters, setChosenLetters }) {
+function Form({
+  chosenLetters,
+  setChosenLetters,
+  setScore,
+  word,
+  setEndMessage,
+}) {
   const [input, setInput] = useState("");
   const [msg, setMsg] = useState("");
 
   const handleSubmit = (event) => {
+    //Feels like the logic in here should be in the game component???
     event.preventDefault();
     if (!input) return;
     setChosenLetters((currLetters) => {
-      return [input, ...currLetters];
+      const newLetters = [input, ...currLetters];
+      const win = word.split("").every((letter) => {
+        return newLetters.includes(letter);
+      });
+      if (win) {
+        //I think this should likely change state of GameRunning or similar?
+        setEndMessage("You have won!");
+      }
+      return newLetters;
+    });
+    setScore((score) => {
+      if (!word.split("").includes(input)) score++;
+      if (score == 5) {
+        //I think this should likely change state of GameRunning or similar?
+        setEndMessage("You have lost!");
+      }
+      return score;
     });
     setInput("");
   };
