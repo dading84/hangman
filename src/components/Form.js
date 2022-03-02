@@ -12,7 +12,6 @@ function Form({
   const [msg, setMsg] = useState("");
 
   const handleSubmit = (event) => {
-    //Feels like the logic in here should be in the game component???
     event.preventDefault();
     if (!input) return;
     setChosenLetters((currLetters) => {
@@ -37,9 +36,13 @@ function Form({
     setInput("");
   };
 
-  const validateChar = ({ target }) => {
-    if (!chosenLetters.includes(target.value) && /^[a-z]$/.test(target.value)) {
-      setInput(target.value);
+  const validateChar = (event) => {
+    const value = event.target.value;
+    if (
+      (!chosenLetters.includes(value) && /^[a-z]$/.test(value)) ||
+      value === ""
+    ) {
+      setInput(value);
       setMsg("");
     } else {
       setMsg("You have entered an invalid entry, please enter a unique letter");

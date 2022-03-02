@@ -1,34 +1,27 @@
 #app {
   text-align: center;
-  /* border: 2px solid orange; */
-  padding: 50px;
+  padding-top: 20px;
 }
 
 #game {
-  /* border: 2px solid green; */
-  height: 500px;
-  width: 500px;
   margin: 0 auto;
-  padding: 50px;
 }
 
 img {
   width: 400px;
   height: 200px;
 }
-
 #word,
 #chosen-letters {
-  /* border: 2px solid blue; */
   padding: 10px;
   margin: 10px;
 }
 
 form,
 #end-message {
-  /* border: 2px solid yellow; */
   padding: 10px;
   margin: 10px;
+  line-height: 1.2em;
 }
 
 input,
@@ -46,7 +39,6 @@ input {
 }
 
 #hangman {
-  /* border: 2px solid purple; */
   margin: 0 10px;
 }
 
@@ -64,7 +56,6 @@ input {
 }
 
 .letter {
-  /* border: 1px solid red; */
   padding: 5px;
   font-size: 1.2em;
 }

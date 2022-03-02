@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Word from "./Word.js";
 import Hangman from "./Hangman.js";
 import Form from "./Form.js";
@@ -6,11 +6,25 @@ import ChosenLetters from "./ChosenLetters.js";
 import EndMessage from "./EndMessage.js";
 
 function Game() {
-  const word = "hangman";
+  const [word, setWord] = useState("hangman");
   const [chosenLetters, setChosenLetters] = useState([]);
   const [score, setScore] = useState(0);
   const [endMessage, setEndMessage] = useState("");
   const [running, setRunning] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("words.txt")
+      .then((response) => response.text())
+      .then((data) => {
+        const words = data.split("\n");
+        setWord(words[Math.floor(Math.random() * words.length)]);
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) return <p>Loading ...</p>;
 
   let userInput;
   if (running) {

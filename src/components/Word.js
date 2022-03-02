@@ -6,8 +6,6 @@ function Word({ word, chosenLetters }) {
   return (
     <div id="word">
       {letters.map((letter) => {
-        console.log(chosenLetters);
-        console.log(chosenLetters.includes(letter));
         return (
           <Letter
             key={i++}
