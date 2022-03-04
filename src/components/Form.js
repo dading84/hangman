@@ -41,7 +41,7 @@ function Form({
   };
 
   const validateChar = (event) => {
-    const value = event.target.value;
+    const value = event.target.value.toLowerCase();
     if (
       (!chosenLetters.includes(value) && /^[a-z]$/.test(value)) ||
       value === ""
