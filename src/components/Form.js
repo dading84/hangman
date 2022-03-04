@@ -7,6 +7,7 @@ function Form({
   word,
   setEndMessage,
   setRunning,
+  setHaveWon,
 }) {
   const [input, setInput] = useState("");
   const [msg, setMsg] = useState("");
@@ -22,6 +23,7 @@ function Form({
       });
       if (win) {
         setRunning(false);
+        setHaveWon(true);
         setEndMessage("You have won");
       }
       return newLetters;
@@ -30,6 +32,7 @@ function Form({
       if (!word.split("").includes(input)) score++;
       if (score === losingScore) {
         setRunning(false);
+        setHaveWon(false);
         setEndMessage("You have lost");
       }
       return score;

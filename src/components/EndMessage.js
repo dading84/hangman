@@ -1,8 +1,8 @@
-function EndMessage({ endMessage }) {
+function EndMessage({ endMessage, haveWon }) {
   if (endMessage) {
     return (
-      <div id="end-message">
-        {endMessage}! ... <a href="index.html">Start again&gt;&gt;</a>
+      <div id="end-message" className={haveWon ? "success" : "failure"}>
+        {endMessage}! ... <a href="index.html">Start again &gt;&gt;</a>
       </div>
     );
   } else {

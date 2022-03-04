@@ -3,13 +3,8 @@
   padding-top: 20px;
 }
 
-#game {
-  margin: 0 auto;
-}
-
 img {
   width: 400px;
-  height: 200px;
 }
 #word,
 #chosen-letters {
@@ -38,25 +33,32 @@ input {
   color: red;
 }
 
-#hangman {
-  margin: 0 10px;
-}
-
 .letters {
   margin-left: 1em;
 }
 
-#chosen-letters .success {
+.success {
   color: green;
 }
 
-#chosen-letters .failure,
-.game-over {
+.failure {
   color: red;
+}
+
+#chosen-letters .failure {
   text-decoration: line-through;
 }
 
 .letter {
   padding: 5px;
   font-size: 1.2em;
+}
+
+a:link,
+a:visited {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
 }
