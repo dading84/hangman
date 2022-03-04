@@ -1,6 +1,6 @@
 import Letter from "./Letter.js";
 
-function Word({ word, chosenLetters }) {
+function Word({ word, chosenLetters, running }) {
   const letters = word.split("");
   let i = 0;
   return (
@@ -10,7 +10,7 @@ function Word({ word, chosenLetters }) {
           <Letter
             key={i++}
             char={letter}
-            visible={chosenLetters.includes(letter)}
+            visible={chosenLetters.includes(letter) || !running}
           />
         );
       })}

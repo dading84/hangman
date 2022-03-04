@@ -6,7 +6,7 @@ import ChosenLetters from "./ChosenLetters.js";
 import EndMessage from "./EndMessage.js";
 
 function Game() {
-  const [word, setWord] = useState("hangman");
+  const [word, setWord] = useState("");
   const [chosenLetters, setChosenLetters] = useState([]);
   const [score, setScore] = useState(0);
   const [endMessage, setEndMessage] = useState("");
@@ -44,7 +44,7 @@ function Game() {
 
   return (
     <div id="game">
-      <Word word={word} chosenLetters={chosenLetters} />
+      <Word word={word} chosenLetters={chosenLetters} running={running} />
       <Hangman score={score} />
       {userInput}
       <ChosenLetters chosenLetters={chosenLetters} word={word} />

@@ -50,7 +50,8 @@ input {
   color: green;
 }
 
-#chosen-letters .failure {
+#chosen-letters .failure,
+.game-over {
   color: red;
   text-decoration: line-through;
 }

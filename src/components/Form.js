@@ -10,6 +10,7 @@ function Form({
 }) {
   const [input, setInput] = useState("");
   const [msg, setMsg] = useState("");
+  const losingScore = 6;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +28,7 @@ function Form({
     });
     setScore((score) => {
       if (!word.split("").includes(input)) score++;
-      if (score === 5) {
+      if (score === losingScore) {
         setRunning(false);
         setEndMessage("You have lost");
       }
