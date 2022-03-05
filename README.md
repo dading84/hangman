@@ -1,3 +1,7 @@
-# Tiny React Apps
+# React Hangman Game
 
-Hangman Game: https://duncan-s-white.github.io/hangman/
+This project was an exercise form the Northcoders skills bootcamp.
+
+The objective was to make a react mini app. I choose to make a hangman game.
+
+Play the game: https://duncan-s-white.github.io/hangman/
