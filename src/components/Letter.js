@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function Letter({ char, visible, success }) {
   return (
     <span

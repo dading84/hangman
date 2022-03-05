@@ -8,10 +8,10 @@ function Form({
   setEndMessage,
   setRunning,
   setHaveWon,
+  losingScore,
 }) {
   const [input, setInput] = useState("");
   const [msg, setMsg] = useState("");
-  const losingScore = 6;
 
   const handleSubmit = (event) => {
     event.preventDefault();

@@ -1,9 +1,12 @@
 #app {
   text-align: center;
-  padding-top: 20px;
   max-width: 600px;
   min-width: 300px;
   margin: 0 auto;
+}
+
+h1 {
+  margin: 25px 0 15px;
 }
 
 img {
@@ -12,14 +15,14 @@ img {
 #word,
 #chosen-letters {
   padding: 10px;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 form,
 #end-message {
-  padding: 10px;
-  margin: 10px;
-  line-height: 1.2em;
+  padding: 5px;
+  margin-top: 10px;
+  line-height: 47px;
 }
 
 input,

@@ -1,7 +1,10 @@
-function Hangman({ score }) {
+function Hangman({ score, losingScore }) {
   return (
     <div id="hangman">
-      <img src={`./images/${score}.png`} />
+      <img
+        src={`./images/${score}.png`}
+        alt={`You have used ${score} lives out of ${losingScore}`}
+      />
     </div>
   );
 }

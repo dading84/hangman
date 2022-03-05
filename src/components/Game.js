@@ -13,6 +13,7 @@ function Game() {
   const [running, setRunning] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [haveWon, setHaveWon] = useState(null);
+  const losingScore = 6;
 
   useEffect(() => {
     setIsLoading(true);
@@ -38,6 +39,7 @@ function Game() {
         setEndMessage={setEndMessage}
         setRunning={setRunning}
         setHaveWon={setHaveWon}
+        losingScore={losingScore}
       />
     );
   } else {
@@ -52,7 +54,7 @@ function Game() {
         running={running}
         haveWon={haveWon}
       />
-      <Hangman score={score} />
+      <Hangman score={score} losingScore={losingScore} />
       {userInput}
       <ChosenLetters chosenLetters={chosenLetters} word={word} />
     </div>
