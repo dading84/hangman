@@ -1,14 +1,13 @@
 #app {
   text-align: center;
   padding-top: 20px;
-}
-
-#hangman {
-  padding: 0 10px;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 img {
-  width: 400px;
+  max-width: 95%;
 }
 #word,
 #chosen-letters {

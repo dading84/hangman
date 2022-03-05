@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function Letter({ char, visible, success }) {
-  console.log(success);
   return (
     <span
       className={`letter ${
